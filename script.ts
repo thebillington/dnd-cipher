@@ -30,7 +30,7 @@ function translate() {
     (<HTMLTextAreaElement>document.getElementById("output"))!.value = output;
 }
 
-function rotate(direction) {
+function rotate(direction: number) {
     offset = ((offset + direction) + 26) % 26;
     generateCipherWheel();
 }
@@ -45,11 +45,11 @@ function reset() {
     generateCipherWheel();
 }
 
-function wrapAlpha(chr) {
+function wrapAlpha(chr: number): number {
     return ((chr % 26) + 26) % 26;
 }
 
-function randomInt(max) {
+function randomInt(max: number): number {
     return Math.floor(Math.random() * max);
 }
 

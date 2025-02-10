@@ -55,7 +55,6 @@ function randomInt(max: number): number {
 
 function translateCharacter(c) {
     c = c.toLowerCase();
-    if (c.match(/^[.,!@£$%^&*()<>;:"'/?1234567890p\r?]/)) return null;
-    if (c === " " || c === "\n") return c;
+    if (c.match(/^[ .,!@£$%^&*()<>;:"'/?1234567890p\r?\n]/)) return c;
     return String.fromCharCode(wrapAlpha(c.charCodeAt(0) + offset - 97) + 97);
 }
